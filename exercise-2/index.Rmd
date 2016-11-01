@@ -1,0 +1,15 @@
+
+### This chart is a scatter and line plot 
+
+``` {r, echo=FALSE, message=FALSE}
+
+library(plotly)
+d <- diamonds[sample(nrow(diamonds), 1000), ]
+
+plot_ly(
+  d, x = ~carat, y = ~price,
+  color = ~carat, size = ~carat
+)
+
+
+```
